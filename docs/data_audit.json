@@ -1,0 +1,43 @@
+{
+  "archive_size_bytes": 580176617,
+  "raw_count": 25000,
+  "raw_classes": {
+    "cats": 12500,
+    "dogs": 12500
+  },
+  "extensions": {
+    ".jpg": 25000
+  },
+  "decoded_formats": {
+    "JPEG": 25000
+  },
+  "valid_count": 25000,
+  "broken_count": 0,
+  "extra_byte_copies": 6,
+  "removed_pixel_copies": 6,
+  "conflicting_label_files": 0,
+  "clean_count": 24994,
+  "split": {
+    "train": {
+      "total": 17496,
+      "cats": 8748,
+      "dogs": 8748
+    },
+    "validation": {
+      "total": 3750,
+      "cats": 1875,
+      "dogs": 1875
+    },
+    "test": {
+      "total": 3748,
+      "cats": 1874,
+      "dogs": 1874
+    }
+  },
+  "zip_crc_ok": true,
+  "zip_matches_folder_sha256": true,
+  "split_pixel_hashes_disjoint": true,
+  "archive_sha256": "5f9304854c39a71b7954891159e4f99c76fbe4369736a1164534b1566d1e25f0",
+  "provenance": "Author-provided local train.zip; original download source and redistribution license were not recorded.",
+  "audit_context": "Original local data audit. The fresh Colab verification run will report its own runtime metrics separately."
+}
