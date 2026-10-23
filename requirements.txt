@@ -1,0 +1,9 @@
+# Для локального распознавания и библиотек обучения.
+# Google Colab уже содержит основные библиотеки; google-colab сюда не входит.
+numpy>=1.26,<3
+Pillow>=10,<13
+tensorflow>=2.16,<3
+pandas>=2,<3
+matplotlib>=3.8,<4
+scikit-learn>=1.4,<2
+gdown>=5,<6
