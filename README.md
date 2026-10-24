@@ -10,6 +10,51 @@ A separate command-line tool produces batch predictions as an `id,label` CSV.
 
 [Notebook](notebooks/cats_dogs_cnn.ipynb) · [Data audit](docs/data_audit.json) · [Model card](docs/model_card.md)
 
+## Verified results
+
+A fresh Google Colab run on **24 October 2026** trained for 20 epochs on an
+NVIDIA T4 using TensorFlow 2.21.0 and Python 3.13.16. The checkpoint from **epoch
+19** was selected by validation loss (0.2507; validation accuracy 89.76%).
+
+On the held-out test split, **3,380 / 3,748 predictions were correct: 90.18%
+accuracy**, with binary cross-entropy loss **0.2388** and 368 errors.
+
+- **Cat:** precision 90.44%, recall 89.86%, F1 90.15% (1,874 images).
+- **Dog:** precision 89.93%, recall 90.50%, F1 90.21% (1,874 images).
+- Confusion matrix, rows = true labels and columns = predictions, cat first:
+  `[[1684, 190], [178, 1696]]`.
+
+The [verification record](docs/verification_run.json) contains unrounded metrics
+and all 20 epochs of training history. These results describe this dataset and
+split, not arbitrary photos. A seed helps repeatability but GPU/runtime changes
+can still produce different training results. Trained weights are stored in the
+author's Google Drive and are not bundled in this repository.
+
+## Screenshots from the Colab run
+
+**Data audit.** Corrupt files and exact RGB duplicates are checked before splitting.
+
+![Colab data audit](docs/screenshots/01-data-audit.jpg)
+
+**Dataset split.** Each subset is balanced, and exact-image hashes are disjoint.
+
+![Stratified train, validation and test split](docs/screenshots/02-dataset-split.jpg)
+
+**Training history.** Accuracy and loss are plotted for train and validation;
+the dashed line marks the selected checkpoint.
+
+![Training and validation learning curves](docs/screenshots/03-learning-curves.jpg)
+
+**Held-out evaluation.** The test set is evaluated after checkpoint selection.
+
+![Test accuracy and per-class metrics](docs/screenshots/04-test-metrics.jpg)
+
+**Single-image inference.** This example uses a training image to demonstrate
+the inference function; it is not additional evidence of test accuracy.
+Scores are model estimates, not calibrated confidence guarantees.
+
+![Single-photo prediction example](docs/screenshots/05-prediction-example.jpg)
+
 ## Training data
 
 The training archive was provided locally by the author. It contains **25,000 JPEG
