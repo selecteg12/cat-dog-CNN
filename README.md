@@ -1,8 +1,10 @@
-# Cats vs. Dogs — CNN from Scratch
+# cat/dog CNN
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/selecteg12/cats-dogs-cnn-from-scratch/blob/main/notebooks/cats_dogs_cnn.ipynb)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/selecteg12/cat-dog-CNN/blob/main/notebooks/cats_dogs_cnn.ipynb)
 
-A complete educational image classification project built with TensorFlow/Keras.
+An educational cat/dog image classification project built with TensorFlow/Keras.
+**CNN** stands for **Convolutional Neural Network**: a network that learns visual
+features using convolutional filters and combines them to classify an image.
 A custom CNN learns from random initialization: **no pretrained backbone, transfer
 learning, or external pretrained weights**. The notebook covers data auditing,
 training, evaluation, visualizations, and a photo upload demo in Google Colab.
